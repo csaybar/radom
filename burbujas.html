@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<section>
+		<div>
+			<br><br><br>
+			<br><br><br>
+			<h3>
+				Si llegaste aquí es por qué si eres rebelde sin causa :v ahahaha
+			</h3>
+			<h3>
+				antes de ver mi chiste malo, por favor escucha el audio que te envié,
+			</h3>	
+			<h3>
+				es un chiste decente antes de ir a los peor</h3>
+			</h3>
+			<br>	
+		</div>
+		<div>
+			<br><br>
+			<audio controls id="bgAudio" style="margin: 0 auto; display: block;">
+				<source src="mp3/fanny.m4a" >
+			</audio>
+			<script>
+				var audio = document.getElementById("bgAudio");
+				audio.volume = 0.2;
+			</script>
+		</div>
+		<br><br><br><br>
+		<div>
+			<button class="Click-here">Dale click aquí</button>
+			<div class="custom-model-main">
+				<div class="custom-model-inner">
+				   <div class="close-btn">×</div>
+				   <div class="custom-model-wrap">
+					  <div class="pop-up-content-wrap">
+						 <h2>¿Te soy sincero?Soy malo con los chistes asi que igual gracias por tiempo</h2>
+						 <p>Qué tengas un buen incio de semana</p>
+					  </div>
+				   </div>
+				</div>
+				<div class="bg-overlay"></div>
+			 </div>
+			 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+			 <script>
+			 $(".Click-here").on('click', function() {
+			   $(".custom-model-main").addClass('model-open');
+			 }); 
+			 $(".close-btn, .bg-overlay").click(function(){
+			   $(".custom-model-main").removeClass('model-open');
+			 });
+			 </script>
+		</div>
+	</section>
+	<script type="text/javascript">
+		function createBubble(){
+			const section = document.querySelector("section")
+			const createElement = document.createElement("span")
+			var size = Math.random() * 60;
+			createElement.style.width = 20 + size + 'px';
+			createElement.style.height = 20 + size + 'px';	
+			createElement.style.left = Math.random()* innerWidth + 'px';
+			section.appendChild(createElement);
+			setTimeout(() => {
+				createElement.remove()
+			},4000)	 
+		}
+        setInterval(createBubble,50)
+	</script>
+</body>
+</html>
